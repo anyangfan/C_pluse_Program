@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "arm",
+            "includePath": [
+                "/usr/lib/gcc/aarch64-linux-gnu/8/include/**",
+                "/usr/local/include/**",
+                "/usr/lib/gcc/aarch64-linux-gnu/8/include-fixed/**",
+                "/usr/include/aarch64-linux-gnu/**",
+                "/usr/include/**",
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "/home/linaro/Desktop/C_pluse_Program/**",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c23",
+            "cppStandard": "c++23"
+        }
+    ],
+    "version": 4
+}
