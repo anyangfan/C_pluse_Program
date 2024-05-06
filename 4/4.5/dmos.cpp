@@ -22,7 +22,7 @@ void dispObject(TestA& t)
 	try 
 	{
 		TestB& tb = dynamic_cast<TestB&>(t);
-		// 在此转换若不安全，会抛出bad_cast异常
+		// 鍦ㄦ杞崲鑻ヤ笉瀹夊叏锛屼細鎶涘嚭bad_cast寮傚父
 		tb.disp();		
 	}
 	catch (bad_cast& e)

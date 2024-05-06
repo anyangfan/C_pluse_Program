@@ -13,7 +13,7 @@ void PrintID(int id)
 
 	while (!ready)
 	{
-		scv.wait(lock); // µ±Ç°Ïß³Ì±»×èÈû£¬µ±È«¾Ö±êÖ¾Î»±äÎªtrueÖ®ºó£¬²Å»½ĞÑ
+		scv.wait(lock); // å½“å‰çº¿ç¨‹è¢«é˜»å¡ï¼Œå½“å…¨å±€æ ‡å¿—ä½å˜ä¸ºtrueä¹‹åï¼Œæ‰å”¤é†’
 	}
 	std::cout << "Threads : " << id << std::endl;
 }
@@ -22,8 +22,8 @@ void RunFunc()
 {
 	std::unique_lock <std::mutex> lock(mx);
 
-	ready = true; // ÉèÖÃÈ«¾Ö±êÖ¾Î»Îªtrue
-	scv.notify_all(); // »½ĞÑËùÓĞÏß³Ì
+	ready = true; // è®¾ç½®å…¨å±€æ ‡å¿—ä½ä¸ºtrue
+	scv.notify_all(); // å”¤é†’æ‰€æœ‰çº¿ç¨‹
 }
 
 int main()
