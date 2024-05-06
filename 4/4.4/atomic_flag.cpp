@@ -38,3 +38,8 @@ int main()
 
 	return 0;
 }
+
+/*
+设置编译器选项：cd "/userdata/Desktop/C_pluse_Program/4/4.4/" && g++ atomic_flag.cpp -o atomic_flag -lpthread && "/userdata/Deskto
+p/C_pluse_Program/4/4.4/"atomic_flag
+*/
