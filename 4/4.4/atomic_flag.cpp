@@ -10,7 +10,10 @@ std::atomic_flag lock = ATOMIC_FLAG_INIT; //
 void FuncAt(int args)
 {
 	//获取当前线程的ID
-	cout << "Thread" << args << ":" << std::this_thread::get_id() <<endl;
+	if(lock.test_and_set(std::memory_order_acquire)){
+		cout << "Thread" << args << ":" << std::this_thread::get_id() << " is running" <<endl;
+	}
+	lock.clear(std::memory_order_release);
 	for (int i = 0; i < 10; i++)
 	{
 		while (lock.test_and_set(std::memory_order_acquire))
